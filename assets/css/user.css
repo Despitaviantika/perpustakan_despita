@@ -1,0 +1,129 @@
+body { 
+    background: #f4f7f6; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* LAYOUT UTAMA DENGAN SIDEBAR */
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+/* SIDEBAR STYLING */
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #03045e;
+    color: #fff;
+    position: fixed;
+    height: 100vh;
+    z-index: 1050;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #02033a;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul li a {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    display: block;
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+#sidebar ul li a:hover, #sidebar ul li.active > a {
+    color: #fff;
+    background: #0077b6;
+}
+
+#sidebar ul li a i {
+    margin-right: 10px;
+}
+
+/* KONTEN UTAMA DIGESER KANAN AGAR TIDAK TERTUTUP SIDEBAR */
+#content {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    min-height: 100vh;
+}
+
+.navbar { 
+    background: linear-gradient(135deg, #0d3b66 0%, #0077b6 100%) !important; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.card { 
+    border: none; 
+    border-radius: 15px; 
+}
+.info-card { 
+    transition: .3s; 
+}
+.info-card:hover { 
+    transform: translateY(-5px); 
+}
+
+.bg-gradasi {
+    background: linear-gradient(135deg, #0d3b66 0%, #0077b6 100%) !important;
+    color: #ffffff !important;
+}
+
+.btn-gradasi {
+    background: linear-gradient(135deg, #0077b6 100%, #00b4d8 100%);
+    color: #ffffff;
+    border: none;
+}
+.btn-gradasi:hover {
+    background: linear-gradient(135deg, #023e8a 100%, #0077b6 100%);
+    color: #ffffff;
+}
+
+.book-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
+}
+.book-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+.book-img {
+    width: 100px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+/* Star Rating Input Styling */
+.rating-input {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+.rating-input input {
+    display: none;
+}
+.rating-input label {
+    font-size: 1.5rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.rating-input input:checked ~ label,
+.rating-input label:hover,
+.rating-input label:hover ~ label {
+    color: #f39c12;
+}

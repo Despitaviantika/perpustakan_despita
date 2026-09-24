@@ -1,0 +1,9 @@
+body { background: #f4f7f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+.navbar-petugas { background: linear-gradient(135deg, #2b2d42 0%, #1a1c24 100%) !important; }
+.card { border: none; border-radius: 12px; transition: .2s; }
+.card:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.1); }
+
+/* Efek Gradasi Biru Lembut untuk Semua Kartu */
+.card-gradient-blue {
+    background: linear-gradient(135deg, #f0f7ff 0%, #e1effe 100%);
+}
